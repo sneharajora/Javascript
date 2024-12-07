@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME</title>
+</head>
+<body>
+    <h2>Javascript HTML DOM</h2>
+    <p>Finding HTML Elements by Query Selector</p>
+
+    <div>Div one</div>
+    <p class="intro">Paragraph two</p>
+    <div>Div two</div>
+    <p class="subheading">Paragraph two</p>
+    <div>Yet another div</div>
+
+</body>
+   <script>
+     var paragraphs = document.querySelectorAll('p.intro');
+     paragraphs.forEach((paragraph) => {paragraph.style.backgroundColor = "red"})
+
+  </script>
+</html>

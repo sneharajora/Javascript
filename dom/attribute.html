@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    .democlass{
+        color:red;
+    }
+  </style>
+<body>
+    <h1 id="myH1">The Element Object</h1>
+    <h2>The setAttribute() Method</h2>
+
+    <p>Click "Add Class" to add a class attribute to the h1 element:</p>
+    <button onClick="myFunction()">Add Class</button>
+    <input id="myInput" type="text" value="OK"><br>
+    <button onclick="change()">change</button>
+
+    <p>This is another paragraph to append</p>
+    <div id="myDiv" style="padding:16px; background-color:lightgray">
+        <h3>A Div element</h3>
+    </div>
+
+     <h2>Javascript HTML Dom</h2>
+     <p>Remove Child Element</p>
+
+     <div id="div1">
+         <p id="p1">This is a paragraph</p>
+         <p id="p2">This is another paragraph</p>
+     </div>
+      
+       <ul id="myList">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+       </ul>
+    <script>
+         function myFunction(){
+            document.getElementById("myH1").setAttribute("class","democlass");
+         }
+         function change(){
+              document.getElementById("myInput").setAttribute("type","button");
+         }
+         const para = document.createElement("p");
+         para.innerHTML = "This is a paragraph";
+
+         //Append to another element:
+         document.getElementById("myDiv").appendChild(para);
+
+         //Remove
+         const parent = document.getElementById("div1");
+            const child = document.getElementById("p1");
+            parent.removeChild(child);
+
+         // Replace
+           const getul = getElementById("myList").children[1];
+           const replacenode = document.createTextNode("Juice");
+
+           getul.replaceChild(replacenode,getul.childNodes[0]);
+           
+    </script>
+</body>
+</html>
